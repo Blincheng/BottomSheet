@@ -6,6 +6,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.support.v4.app.FragmentActivity;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
 /**
@@ -18,12 +19,12 @@ public class AnimationUtils {
     public static void startZoomAnimation(Context context,boolean isShow){
         if(context instanceof FragmentActivity){
             final View contentView = ((Activity)context).findViewById(android.R.id.content);
-            LinearLayout parent = (LinearLayout) ((Activity)context).findViewById(android.R.id.content).getParent();
-            parent.setBackgroundColor(context.getResources().getColor(android.R.color.black));
-//            if (contentView != null && Build.VERSION.SDK_INT >= 19) {
-//                contentView.setFitsSystemWindows(true);
-//                contentView.setBackgroundResource(android.R.color.white);
-//            }
+            if(contentView.getParent() instanceof ViewGroup){
+                ViewGroup parent = (LinearLayout) contentView.getParent();
+                parent.setBackgroundColor(context.getResources().getColor(android.R.color.black));
+            }else{
+                return;
+            }
             if(contentView.getScaleX() < 1f&&!isShow){//变大
                 final ValueAnimator anim = ObjectAnimator.ofFloat(0.92F, 1.0F).setDuration(200);
                 anim.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {

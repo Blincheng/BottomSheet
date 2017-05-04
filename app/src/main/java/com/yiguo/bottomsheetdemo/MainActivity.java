@@ -12,7 +12,6 @@ import com.yiguo.bottomsheetlib.interfaces.BottomSheetEventCallBack;
 import com.yiguo.bottomsheetlib.utils.BottomSheetTitleSetting;
 
 public class MainActivity extends FragmentActivity {
-
     private BottomSheetDialogInterface builder;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,16 +25,19 @@ public class MainActivity extends FragmentActivity {
                         .addOnShowListeners(new DialogInterface.OnShowListener() {
                             @Override
                             public void onShow(DialogInterface dialog) {
+                                //当打开Dialog后回调
                             }
                         })
                         .setBottomSheetEventCallBack(new BottomSheetEventCallBack() {
                             @Override
                             public void onLeftClicked(BottomSheetDialogInterface dialogInterface, int pageIndex) {
+                                //标题栏左边按钮点击回调
                                 builder.popUp();
                             }
 
                             @Override
                             public void onRightClicked(BottomSheetDialogInterface dialogInterface, int pageIndex) {
+                                //标题栏右边按钮点击回调
                                 builder.push(new SecondFragment(),new BottomSheetTitleSetting()
                                         .setTitleButtonVisible(false,true)
                                         .setTitle(BottomSheetTitleSetting.getSpannableString("这是第二个标题",
@@ -44,20 +46,26 @@ public class MainActivity extends FragmentActivity {
                             }
                             @Override
                             public void onSupernatantClick(BottomSheetDialogInterface dialogInterface, int pageIndex) {
+                                //点击空白部分回调
                                 dialogInterface.cancel();
                             }
                         })
-                        .setContainerHeight(0.5f)
+                        .setContainerHeight(0.5f)//设置Dialog的弹出高度
                         .setOnDismissListener(new BottomSheetDismissInterface() {
                             @Override
                             public void dismiss(DialogInterface dialog) {
-
+                                //当关闭Dialog后回调
                             }
                         })
-                        .build();
+                        .build();//最后才调用build
                 builder.push(new FirstFragment(),new BottomSheetTitleSetting().setTitle("第一个标题"));
                 builder.show();
             }
         });
+
+
+        BottomSheetDialogInterface builder = new BottomSheetSettingsBuilder(MainActivity.this).build();
+        builder.push(new FirstFragment(),new BottomSheetTitleSetting().setTitle("第一次使用"));
+        builder.show();
     }
 }
