@@ -17,7 +17,7 @@ Step 2. Add the dependency
 
 
   	dependencies {
-		compile 'com.github.Blincheng:BottomSheet:v0.1'
+		compile 'com.github.Blincheng:BottomSheet:v0.3'
 	}
 你可以这样使用
 
