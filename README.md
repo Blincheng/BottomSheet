@@ -22,10 +22,9 @@ Step 2. Add the dependency
   
   最简单使用：（可以看到先push一个页面，然后再show()，其实不管怎么做，都是在展示FragmentDialog的时候才会去push，因为内部处理了）
   
-  
   		BottomSheetDialogInterface builder = new BottomSheetSettingsBuilder(MainActivity.this).build();
-                builder.push(new FirstFragment(),new BottomSheetTitleSetting().setTitle("第一次使用"));
-                builder.show();
+        builder.push(new FirstFragment(),new BottomSheetTitleSetting().setTitle("第一次使用"));
+        builder.show();
 		
 		
   你可以设置最外层动画是否打开：
