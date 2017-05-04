@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">BottomSheetLib</string>
+    <string name="bottom_sheet_right_close_text">关闭</string>
+    <string name="bottom_sheet_left_close_text">返回</string>
+</resources>
