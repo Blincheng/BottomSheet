@@ -19,6 +19,12 @@ Step 2. Add the dependency
   	dependencies {
 		compile 'com.github.Blincheng:BottomSheet:v0.1'
 	}
+你可以这样使用
+
+
+  	BottomSheetDialogInterface builder = new BottomSheetSettingsBuilder(MainActivity.this).build();
+        builder.push(new FirstFragment(),new BottomSheetTitleSetting().setTitle("第一次使用"));
+        builder.show();	
   	
   你可以设置最外层动画是否打开：
   
