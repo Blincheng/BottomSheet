@@ -2,6 +2,8 @@
 
 一个自下而上弹出的Dialog,并且可以从右往左push页面，
 自带导航栏和弹出时缩小外层布局的效果（类似iOS京东的商详选择规格的动画）
+效果图如下：
+![这里写图片描述](http://img.blog.csdn.net/20170504164257212?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMjU4NjcxNDE=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
 集成：
 Step 1. Add the JitPack repository to your build file
 
