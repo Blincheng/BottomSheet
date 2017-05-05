@@ -164,6 +164,8 @@ public class BottomSheetDialogFragment extends DialogFragment implements BottomS
 
     @Override
     public void popUp() {
+        if(fragments.size() == 0)
+            return;
         if(fragments.size() == 1){
             cancel();
             return;
