@@ -2,7 +2,7 @@
 
 #前言
 好久不见，今天来分享一个可能大家会用到的工具，然后打算持续集成开发优化，为大家做一个有人管理的第三方库，做到好用实用等等等等~哈哈哈，先看看效果图~
-![效果图](http://img.blog.csdn.net/20170505102047348?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMjU4NjcxNDE=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
+![这里写图片描述](http://img.blog.csdn.net/20170515161507051?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMjU4NjcxNDE=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
 
 #简介
 嗯~没错的，就是这个从底部弹出的DialogFragment，然后我叫它是BottomSheet，当然通过效果图也看出来了，不仅仅是能从底部向上弹出，还能将Activity整体缩放，实现一个凹下去的效果，当然动画效果后期可以修改优化，到时候也可以大家自己去实现。
