@@ -62,10 +62,5 @@ public class MainActivity extends FragmentActivity {
                 builder.show();
             }
         });
-
-
-        BottomSheetDialogInterface builder = new BottomSheetSettingsBuilder(MainActivity.this).build();
-        builder.push(new FirstFragment(),new BottomSheetTitleSetting().setTitle("第一次使用"));
-        builder.show();
     }
 }
